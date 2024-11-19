@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AdminEmpleados.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Sistema de Administración de Empleados</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <form runat="server">
+        <div>
+            <!-- Encabezado -->
+            <header>
+                <h1>Sistema de Administración de Empleados</h1>
+                <p>Bienvenido a la plataforma de gestión.</p>
+            </header>
+
+            <!-- Barra de navegación -->
+            <nav>
+                <ul>
+                    <li><a href="HomePage.aspx">Inicio</a></li>
+                    <li><a href="Empleados.aspx">Empleados</a></li>
+                    <li><a href="TelefonosEmpleado.aspx">Teléfonos</a></li>
+                    <li><a href="DireccionesEmpleado.aspx">Direcciones</a></li>
+                    <li><a href="PuestosEmpleado.aspx">Puestos</a></li>
+                    <li><a href="Login.aspx" id="btnLogout" runat="server" OnClick="btnLogout_Click">Cerrar sesión</a></li> <!-- Log-out -->
+                </ul>
+            </nav>
+
+            <!-- Contenido principal, donde cada página individual será cargada -->
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <!-- Pie de página -->
+            <footer>
+                <p>&copy; 2024 Sistema de Administración de Empleados</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
